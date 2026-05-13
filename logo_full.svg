@@ -1,0 +1,23 @@
+<svg width="600" height="200" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(10, 20)">
+    <path 
+      d="M12 8V32M12 8H24C27.3137 8 30 10.6863 30 14C30 17.3137 27.3137 20 24 20H12" 
+      stroke="#1A1A1A" 
+      stroke-width="2.5" 
+      stroke-linecap="square"
+      stroke-linejoin="miter"
+    />
+    <path 
+      d="M26 22L28 28L34 30L28 32L26 38L24 32L18 30L24 28L26 22Z" 
+      fill="#1A1A1A"
+    />
+    <path 
+      d="M16 14H22" 
+      stroke="#1A1A1A" 
+      stroke-width="1.5"
+      stroke-opacity="0.3"
+    />
+  </g>
+  <text x="60" y="52" fill="#1A1A1A" font-family="sans-serif" font-weight="bold" font-size="24" letter-spacing="-1">PLATINREIN</text>
+  <text x="60" y="68" fill="#1A1A1A" fill-opacity="0.3" font-family="sans-serif" font-weight="bold" font-size="8" letter-spacing="4">GEBÄUDESERVICE</text>
+</svg>
