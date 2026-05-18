@@ -126,19 +126,20 @@ export default function Services() {
                 </p>
               </div>
               
-              <div className="absolute inset-0 z-0 overflow-hidden">
-                {/* Mobile: Static low opacity background */}
+              <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                {/* Mobile: Completely static, simple image to prevent flickering */}
                 <img 
                   src={service.image} 
-                  alt={service.title} 
+                  alt="" 
                   className="w-full h-full object-cover opacity-[0.07] block md:hidden"
                   referrerPolicy="no-referrer"
+                  loading="eager"
                 />
-                {/* Desktop: Hover interactions */}
+                {/* Desktop: Smooth hover interactions */}
                 <img 
                   src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover hidden md:block opacity-0 group-hover:opacity-[0.1] grayscale group-hover:grayscale-0 scale-110 group-hover:scale-100 transition-all duration-[2000ms]"
+                  alt="" 
+                  className="w-full h-full object-cover hidden md:block opacity-0 group-hover:opacity-[0.1] grayscale group-hover:grayscale-0 scale-110 group-hover:scale-100 transition-all duration-[1500ms] ease-out shadow-inner"
                   referrerPolicy="no-referrer"
                 />
               </div>
