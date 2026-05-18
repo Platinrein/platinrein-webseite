@@ -77,7 +77,7 @@ export default function Hero() {
                     whileHover={{ rotate: 45 }}
                     whileTap={{ rotate: 45 }}
                     whileInView={{ rotate: 45 }}
-                    viewport={{ once: false, amount: 0.8 }}
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                   >
                     <ArrowRight size={22} />

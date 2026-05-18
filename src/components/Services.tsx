@@ -126,14 +126,15 @@ export default function Services() {
                 </p>
               </div>
               
-              <div className="absolute inset-0 z-0 md:opacity-0 md:group-hover:opacity-[0.1] transition-opacity duration-1000 will-change-[opacity]">
+              <div className="absolute inset-0 z-0 md:opacity-0 md:group-hover:opacity-[0.1] transition-opacity duration-1000">
                 <motion.img 
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 0.15 }}
-                  viewport={{ once: false, amount: 0.4 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1 }}
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover scale-110 block md:hidden transform-gpu"
+                  className="w-full h-full object-cover block md:hidden transform-gpu"
                   referrerPolicy="no-referrer"
                 />
                 <img 
