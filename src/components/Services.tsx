@@ -126,21 +126,19 @@ export default function Services() {
                 </p>
               </div>
               
-              <div className="absolute inset-0 z-0 md:opacity-0 md:group-hover:opacity-[0.1] transition-opacity duration-1000">
-                <motion.img 
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 0.15 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 1 }}
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover block md:hidden transform-gpu"
-                  referrerPolicy="no-referrer"
-                />
+              <div className="absolute inset-0 z-0 overflow-hidden">
+                {/* Mobile: Static low opacity background */}
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[2000ms] hidden md:block grayscale hover:grayscale-0"
+                  className="w-full h-full object-cover opacity-[0.07] block md:hidden"
+                  referrerPolicy="no-referrer"
+                />
+                {/* Desktop: Hover interactions */}
+                <img 
+                  src={service.image} 
+                  alt={service.title} 
+                  className="w-full h-full object-cover hidden md:block opacity-0 group-hover:opacity-[0.1] grayscale group-hover:grayscale-0 scale-110 group-hover:scale-100 transition-all duration-[2000ms]"
                   referrerPolicy="no-referrer"
                 />
               </div>
