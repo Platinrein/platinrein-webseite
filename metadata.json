@@ -1,6 +1,6 @@
 {
   "name": "Platinrein Gebäudeservice",
-  "description": "Exklusiver Gebäudeservice mit höchstem Anspruch an Professionalität und Reinheit. Modern, minimalistisch und hochwertig.",
+  "description": "Exklusiver Gebäudeservice mit höchstem Anspruch an Professionalität und Reinheit. Modern, minimalistisch und hochwertig gestaltet für anspruchsvolle Gewerbe- und Privatkunden.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

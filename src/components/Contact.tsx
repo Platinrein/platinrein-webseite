@@ -42,11 +42,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="kontakt" className="py-32 px-10 md:px-20 bg-studio border-t border-platinum/30">
+    <section id="kontakt" className="py-24 md:py-32 px-6 md:px-20 bg-studio border-t border-platinum/30">
       <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-5">
           <span className="text-[10px] uppercase tracking-[0.5em] text-charcoal/30 font-bold mb-4 block">
-            Dialogue
+            Austausch
           </span>
           <h2 className="text-4xl md:text-6xl font-light tracking-tighter leading-tight text-charcoal mb-12">
             Lassen Sie uns <br/>
@@ -55,15 +55,19 @@ export default function Contact() {
           
           <div className="space-y-8">
             <div>
-              <p className="text-[9px] text-charcoal/30 uppercase tracking-[0.3em] font-bold mb-2">Digital</p>
+              <p className="text-[9px] text-charcoal/30 uppercase tracking-[0.3em] font-bold mb-2">Telefon</p>
+              <p className="text-xl font-light text-charcoal hover:translate-x-2 transition-transform cursor-pointer">+49 156 78332769</p>
+            </div>
+            <div>
+              <p className="text-[9px] text-charcoal/30 uppercase tracking-[0.3em] font-bold mb-2">E-Mail</p>
               <p className="text-xl font-light text-charcoal hover:translate-x-2 transition-transform cursor-pointer">info@platinrein.de</p>
             </div>
             <div>
-              <p className="text-[9px] text-charcoal/30 uppercase tracking-[0.3em] font-bold mb-2">Location</p>
-              <p className="text-xl font-light text-charcoal hover:translate-x-2 transition-transform cursor-pointer">Letmather Str. 13, Iserlohn</p>
+              <p className="text-[9px] text-charcoal/30 uppercase tracking-[0.3em] font-bold mb-2">Standort</p>
+              <p className="text-xl font-light text-charcoal hover:translate-x-2 transition-transform cursor-pointer tracking-tight">Iserlohn, NRW</p>
             </div>
             <div className="pt-4">
-              <p className="text-[9px] text-charcoal/30 uppercase tracking-[0.3em] font-bold mb-4">Connect</p>
+              <p className="text-[9px] text-charcoal/30 uppercase tracking-[0.3em] font-bold mb-4">Social Media</p>
               <div className="flex gap-6">
                 {[
                   { Icon: Instagram, to: "/social-bald" },

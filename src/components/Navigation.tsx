@@ -23,7 +23,7 @@ export default function Navigation() {
   );
 
   const navItems = [
-    { name: "Dienstleistungen", to: "/#dienstleistungen" },
+    { name: "Leistungen", to: "/#dienstleistungen" },
     { name: "Über uns", to: "/#ueber-uns" },
     { name: "Kontakt", to: "/#kontakt" }
   ];
@@ -31,10 +31,10 @@ export default function Navigation() {
   return (
     <motion.nav
       style={{ backgroundColor, backdropBlur }}
-      className="fixed top-0 left-0 right-0 z-50 px-10 py-8"
+      className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6 md:py-8"
       id="main-nav"
     >
-      <div className="max-w-[1800px] mx-auto flex items-center justify-between">
+      <div className="max-w-[1900px] mx-auto flex items-center justify-between">
         <Link 
           to="/" 
           className="hover:opacity-70 transition-opacity"
@@ -77,22 +77,41 @@ export default function Navigation() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-charcoal/20 backdrop-blur-sm z-[-1] md:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      {/* Mobile Menu Box */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 right-0 bg-white/95 border-b border-gray-100 p-8 flex flex-col gap-6 md:hidden backdrop-blur-xl"
+          className="absolute top-full left-0 right-0 bg-white border-b border-platinum/30 p-8 flex flex-col gap-8 md:hidden shadow-2xl"
         >
-          {navItems.map((item) => (
-            <Link
+          {navItems.map((item, i) => (
+            <motion.div
               key={item.name}
-              to={item.to}
-              onClick={() => setIsOpen(false)}
-              className="text-xs uppercase tracking-[0.3em] font-bold text-charcoal opacity-70 hover:opacity-100 transition-opacity"
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.1 }}
             >
-              {item.name}
-            </Link>
+              <Link
+                key={item.name}
+                to={item.to}
+                onClick={() => setIsOpen(false)}
+                className="text-sm uppercase tracking-[0.4em] font-bold text-charcoal opacity-60 hover:opacity-100 transition-opacity flex items-center justify-between group"
+              >
+                {item.name}
+                <X size={14} className="opacity-0 group-hover:opacity-20 transition-opacity rotate-45" />
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
       )}

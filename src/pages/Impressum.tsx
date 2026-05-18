@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 export default function Impressum() {
   return (
-    <div className="min-h-screen bg-studio py-32 px-10 md:px-20 font-sans">
+    <div className="min-h-screen bg-studio py-24 md:py-32 px-6 md:px-20 font-sans">
       <div className="max-w-4xl mx-auto">
-        <Link to="/" className="inline-flex items-center gap-3 text-charcoal/40 hover:text-charcoal transition-colors mb-16 group">
+        <Link to="/" className="inline-flex items-center gap-3 text-charcoal/40 hover:text-charcoal transition-colors mb-12 md:mb-16 group">
           <ArrowLeft size={16} />
           <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Zurück zur Startseite</span>
         </Link>
@@ -16,16 +16,16 @@ export default function Impressum() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-light tracking-tighter text-charcoal mb-4">
+          <h1 className="text-4xl md:text-7xl font-light tracking-tighter text-charcoal mb-4">
             Impressum.
           </h1>
-          <p className="text-charcoal/40 text-sm uppercase tracking-widest mb-24">Gesetzliche Anbieterkennung</p>
+          <p className="text-charcoal/40 text-[10px] md:text-sm uppercase tracking-widest mb-16 md:mb-24">Gesetzliche Anbieterkennung</p>
         </motion.div>
         
-        <div className="space-y-20 text-charcoal/70 font-light leading-relaxed">
+        <div className="space-y-16 md:space-y-20 text-charcoal/70 font-light leading-relaxed">
           <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
             <div className="md:col-span-4">
-              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] sticky top-32">
+              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] md:sticky md:top-32">
                 Betreiber
               </h2>
             </div>
@@ -42,11 +42,15 @@ export default function Impressum() {
 
           <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 border-t border-platinum pt-16">
             <div className="md:col-span-4">
-              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] sticky top-32">
+              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] md:sticky md:top-32">
                 Kontakt
               </h2>
             </div>
             <div className="md:col-span-8 space-y-6">
+              <div className="flex flex-col gap-1">
+                <span className="text-[10px] uppercase tracking-widest text-charcoal/30 font-bold">Telefon</span>
+                <p className="text-charcoal">+49 156 78332769</p>
+              </div>
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] uppercase tracking-widest text-charcoal/30 font-bold">E-Mail</span>
                 <p className="text-charcoal">info@platinrein.de</p>
@@ -56,7 +60,7 @@ export default function Impressum() {
 
           <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 border-t border-platinum pt-16">
             <div className="md:col-span-4">
-              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] sticky top-32">
+              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] md:sticky md:top-32">
                 Informationen
               </h2>
             </div>
@@ -70,7 +74,7 @@ export default function Impressum() {
 
           <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 border-t border-platinum pt-16">
             <div className="md:col-span-4">
-              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] sticky top-32">
+              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] md:sticky md:top-32">
                 Schlichtung
               </h2>
             </div>
@@ -86,7 +90,7 @@ export default function Impressum() {
           </section>
           <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 border-t border-platinum pt-16">
             <div className="md:col-span-4">
-              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] sticky top-32">
+              <h2 className="text-charcoal text-[10px] font-bold uppercase tracking-[0.4em] md:sticky md:top-32">
                 Disclaimer
               </h2>
             </div>
