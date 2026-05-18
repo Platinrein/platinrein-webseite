@@ -73,11 +73,12 @@ export default function Hero() {
                 >
                   <motion.div
                     initial={{ rotate: 0 }}
+                    animate={{ rotate: 0 }}
                     whileHover={{ rotate: 45 }}
                     whileTap={{ rotate: 45 }}
                     whileInView={{ rotate: 45 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
+                    viewport={{ once: false, amount: 0.8 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
                   >
                     <ArrowRight size={22} />
                   </motion.div>

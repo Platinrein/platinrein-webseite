@@ -62,19 +62,19 @@ export default function Services() {
       {/* Floating Background Decorations */}
       <motion.div 
         style={{ y: y1, rotate }}
-        className="absolute top-20 md:top-40 right-[-15%] md:right-[-10%] text-charcoal/[0.03] pointer-events-none z-0"
+        className="absolute top-20 md:top-40 right-[-15%] md:right-[-10%] text-charcoal/[0.03] pointer-events-none z-0 hidden md:block"
       >
         <Droplets className="w-64 h-64 md:w-[450px] md:h-[450px]" strokeWidth={0.5} />
       </motion.div>
       <motion.div 
         style={{ y: y2, rotate: rotateNeg }}
-        className="absolute bottom-10 md:bottom-20 left-[-10%] md:left-[-5%] text-charcoal/[0.03] pointer-events-none z-0"
+        className="absolute bottom-10 md:bottom-20 left-[-10%] md:left-[-5%] text-charcoal/[0.03] pointer-events-none z-0 hidden md:block"
       >
         <Waves className="w-64 h-64 md:w-[500px] md:h-[500px]" strokeWidth={0.5} />
       </motion.div>
       <motion.div 
         style={{ y: y1, rotate: rotateHalf }}
-        className="absolute top-1/2 left-[10%] md:left-[15%] text-charcoal/[0.02] pointer-events-none z-0"
+        className="absolute top-1/2 left-[10%] md:left-[15%] text-charcoal/[0.02] pointer-events-none z-0 hidden lg:block"
       >
         <Sparkles className="w-32 h-32 md:w-[250px] md:h-[250px]" strokeWidth={0.5} />
       </motion.div>
@@ -126,20 +126,20 @@ export default function Services() {
                 </p>
               </div>
               
-              <div className="absolute inset-0 z-0 md:opacity-0 md:group-hover:opacity-[0.07] transition-opacity duration-1000 grayscale md:grayscale group-hover:grayscale-0">
+              <div className="absolute inset-0 z-0 md:opacity-0 md:group-hover:opacity-[0.1] transition-opacity duration-1000 will-change-[opacity]">
                 <motion.img 
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 0.07 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  whileInView={{ opacity: 0.15 }}
+                  viewport={{ once: false, amount: 0.4 }}
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[3000ms] block md:hidden"
+                  className="w-full h-full object-cover scale-110 block md:hidden transform-gpu"
                   referrerPolicy="no-referrer"
                 />
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[3000ms] hidden md:block"
+                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[2000ms] hidden md:block grayscale hover:grayscale-0"
                   referrerPolicy="no-referrer"
                 />
               </div>
