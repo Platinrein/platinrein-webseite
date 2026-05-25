@@ -1,26 +1,27 @@
-import { motion, useScroll, useTransform } from "motion/react";
-import { useState } from "react";
+import { motion } from "motion/react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const { scrollY } = useScroll();
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
   
-  const backgroundColor = useTransform(
-    scrollY,
-    [0, 50],
-    ["rgba(253, 253, 253, 0)", "rgba(253, 253, 253, 0.8)"]
-  );
-  
-  const backdropBlur = useTransform(
-    scrollY,
-    [0, 50],
-    ["blur(0px)", "blur(15px)"]
-  );
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { name: "Leistungen", to: "/#dienstleistungen" },
@@ -30,14 +31,25 @@ export default function Navigation() {
 
   return (
     <motion.nav
-      style={{ backgroundColor, backdropBlur }}
-      className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6 md:py-8"
+      animate={{
+        paddingTop: isScrolled ? "14px" : "24px",
+        paddingBottom: isScrolled ? "14px" : "24px",
+        backgroundColor: isScrolled ? "rgba(253, 253, 253, 0.90)" : "rgba(253, 253, 253, 0)",
+        backdropBlur: isScrolled ? "15px" : "0px",
+        borderBottomColor: isScrolled ? "rgba(229, 229, 229, 0.50)" : "rgba(229, 229, 229, 0)",
+      }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      style={{
+        backdropFilter: isScrolled ? "blur(15px)" : "none",
+        WebkitBackdropFilter: isScrolled ? "blur(15px)" : "none",
+      }}
+      className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 border-b border-transparent"
       id="main-nav"
     >
       <div className="max-w-[1900px] mx-auto flex items-center justify-between">
         <Link 
           to="/" 
-          className="hover:opacity-70 transition-opacity"
+          className="hover:opacity-75 transition-opacity"
           onClick={(e) => {
             if (location.pathname === "/") {
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -71,7 +83,7 @@ export default function Navigation() {
         <button 
           className="md:hidden text-charcoal opacity-60 hover:opacity-100 transition-opacity"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Menu"
+          aria-label="Menü"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -106,7 +118,7 @@ export default function Navigation() {
                 key={item.name}
                 to={item.to}
                 onClick={() => setIsOpen(false)}
-                className="text-sm uppercase tracking-[0.4em] font-bold text-charcoal opacity-60 hover:opacity-100 transition-opacity flex items-center justify-between group"
+                className="text-sm uppercase tracking-[0.4em] font-bold text-charcoal/80 hover:text-charcoal transition-colors flex items-center justify-between group"
               >
                 {item.name}
                 <X size={14} className="opacity-0 group-hover:opacity-20 transition-opacity rotate-45" />

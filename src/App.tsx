@@ -32,7 +32,7 @@ export default function App() {
       <ScrollToTop />
       <div className="min-h-screen">
         <Navigation />
-        <main className="pt-24">
+        <main className="w-full">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/impressum" element={<Impressum />} />

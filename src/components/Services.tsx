@@ -1,41 +1,41 @@
 import { motion, useScroll, useTransform } from "motion/react";
-import { Sparkles, Building2, Factory, Bed, Droplets, Waves } from "lucide-react";
+import { Sparkles, Building2, Paintbrush, Bed, Droplets, Waves } from "lucide-react";
 import { useRef } from "react";
 
 const services = [
   {
     id: "01",
     title: "Unterhaltsreinigung",
-    description: "Kontinuierliche Pflege für Büros und Gewerbeflächen auf höchstem Niveau.",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=2000",
+    description: "Sorgfältig getaktete Reinigungsintervalle durch fest zugeteiltes, diskretes Stammpersonal. Repräsentative Sauberkeit für Kanzleien, Praxen und Premium-Gewerbeflächen.",
+    image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=1200",
     Icon: Building2
   },
   {
     id: "02",
-    title: "Industrie-Service",
-    description: "Spezialisierte Lösungen für anspruchsvolle Fertigungsumgebungen.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000",
-    Icon: Factory
+    title: "Bauendreinigung",
+    description: "Einzugsfertige Übergabe nach Neubau oder Sanierung. Rückstandsfreie Tiefenreinigung von empfindlichen Parkettböden, anspruchsvollem Feinsteinzeug und feinstem Baustaub.",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1200",
+    Icon: Paintbrush
   },
   {
     id: "03",
-    title: "Glasreinigung",
-    description: "Streifenfreier Glanz für Fensterflächen und Glasfronten jeder Dimension.",
-    image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=2000",
+    title: "Glas- & Fensterreinigung",
+    description: "Streifenfreie Klarheit für Fenster, raumhohe Glasfronten und Wintergärten. Präzise Handarbeit kombiniert mit besonders materialschonenden, sorgfältig selektierten Premium-Reinigungsmitteln.",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=1200",
     Icon: Sparkles
   },
   {
     id: "04",
     title: "Hotel & Hospitality",
-    description: "Exzellenter Reinigungsservice für die gehobene Hotellerie.",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000",
+    description: "Diskretes Housekeeping und verlässliche Zimmerpflege auf Fünf-Sterne-Niveau. Luxuriöser Komfort und makellose Reinheit für anspruchsvolle Gästestrukturen.",
+    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=1200",
     Icon: Bed
   },
   {
     id: "05",
     title: "Sonderreinigung",
-    description: "Individuelle Konzepte für außergewöhnliche und herausfordernde Verschmutzungen.",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
+    description: "Maßgeschneiderte Spezialpflege und intensive Grundreinigungen. Werterhaltende Tiefenpflege für sensible Materialien und außergewöhnliche Oberflächen mit perfekt abgestimmten Produkten.",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200",
     Icon: Droplets
   }
 ];
@@ -105,7 +105,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.8 }}
               viewport={{ once: true }}
-              className="group bg-studio p-8 md:p-14 flex flex-col justify-between aspect-square transition-all duration-700 relative overflow-hidden"
+              className="group bg-studio p-8 sm:p-10 md:p-14 flex flex-col justify-between aspect-auto sm:aspect-square min-h-[300px] transition-all duration-700 relative overflow-hidden cursor-pointer"
             >
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-12">
@@ -121,31 +121,27 @@ export default function Services() {
                 <h3 className="text-2xl md:text-3xl font-light tracking-tight text-charcoal group-hover:translate-x-3 transition-transform duration-700">
                   {service.title}
                 </h3>
-                <p className="mt-6 text-charcoal/40 font-light text-sm leading-relaxed max-w-xs transition-colors group-hover:text-charcoal/60">
+                <p className="mt-6 text-charcoal/50 font-light text-sm leading-relaxed max-w-xs transition-colors group-hover:text-charcoal/80">
                   {service.description}
                 </p>
               </div>
               
               <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                {/* Mobile: Completely static, simple image to prevent flickering */}
+                {/* Responsive luxury image: Subtle elegant visibility, fading in with color on touch, tap or hover */}
                 <img 
                   src={service.image} 
                   alt="" 
-                  className="w-full h-full object-cover opacity-[0.07] block md:hidden"
+                  className="w-full h-full object-cover opacity-[0.08] group-hover:opacity-[0.30] group-active:opacity-[0.40] scale-105 group-hover:scale-100 group-active:scale-100 transition-all duration-[800ms] ease-out shadow-inner"
                   referrerPolicy="no-referrer"
-                  loading="eager"
-                />
-                {/* Desktop: Smooth hover interactions */}
-                <img 
-                  src={service.image} 
-                  alt="" 
-                  className="w-full h-full object-cover hidden md:block opacity-0 group-hover:opacity-[0.1] grayscale group-hover:grayscale-0 scale-110 group-hover:scale-100 transition-all duration-[1500ms] ease-out shadow-inner"
-                  referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </div>
 
-              <div className="relative z-10 pt-10">
-                <div className="w-10 h-[1px] bg-platinum group-hover:w-full transition-all duration-1000"></div>
+              <div className="relative z-10 pt-10 flex items-center justify-between">
+                <div className="w-10 h-[1.5px] bg-platinum group-hover:w-[70%] transition-all duration-1000"></div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal opacity-0 group-hover:opacity-100 transition-all duration-700 translate-x-4 group-hover:translate-x-0">
+                  EXKLUSIV
+                </span>
               </div>
             </motion.div>
           ))}

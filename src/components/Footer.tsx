@@ -1,6 +1,18 @@
-import { Instagram, Twitter, Music2, ArrowRight } from "lucide-react";
+import { Instagram, Music2, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
+
+const XIcon = ({ size = 18 }: { size?: number }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    width={size} 
+    height={size} 
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export default function Footer() {
   return (
@@ -24,23 +36,35 @@ export default function Footer() {
           <p className="text-[10px] uppercase tracking-[0.5em] text-charcoal/20 mb-4 font-bold">Social Media</p>
           <div className="flex gap-8">
             {[
-              { Icon: Instagram, to: "/social-bald" },
-              { Icon: Music2, to: "/social-bald" }, // TikTok
-              { Icon: Twitter, to: "/social-bald" }   // Twitter / X
-            ].map((item, i) => (
-              <Link 
-                key={i} 
-                to={item.to} 
-                className="text-charcoal/30 hover:text-charcoal transition-colors"
-                onClick={() => {
-                  if (window.location.pathname === item.to) {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }
-                }}
-              >
-                <item.Icon size={18} />
-              </Link>
-            ))}
+              { Icon: Instagram, to: "https://www.instagram.com/platinrein?igsh=MXVmenJtbGdvYjBnOQ%3D%3D&utm_source=qr", isExternal: true },
+              { Icon: Music2, to: "/social-bald", isExternal: false }, // TikTok
+              { Icon: XIcon, to: "/social-bald", isExternal: false }   // Twitter / X
+            ].map((item, i) => 
+              item.isExternal ? (
+                <a
+                  key={i}
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-charcoal/30 hover:text-charcoal transition-colors"
+                >
+                  <item.Icon size={18} />
+                </a>
+              ) : (
+                <Link 
+                  key={i} 
+                  to={item.to} 
+                  className="text-charcoal/30 hover:text-charcoal transition-colors"
+                  onClick={() => {
+                    if (window.location.pathname === item.to) {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
+                >
+                  <item.Icon size={18} />
+                </Link>
+              )
+            )}
           </div>
         </div>
       </div>
