@@ -46,7 +46,7 @@ export default function Datenschutz() {
               </h2>
             </div>
             <div className="md:col-span-8 space-y-4">
-              <p className="text-charcoal font-medium">Platinrein Gebäudeservice</p>
+              <p className="text-charcoal font-medium brand-name">Platinrein Gebäudeservice</p>
               <p>
                 Letmather Str. 13<br/>
                 58644 Iserlohn<br/>
@@ -54,7 +54,7 @@ export default function Datenschutz() {
               </p>
               <p className="pt-4">
                 <span className="block text-[10px] uppercase tracking-widest text-charcoal/30 mb-1">E-Mail</span>
-                info@platinrein.de
+                <a href="mailto:info@platinrein.de" className="text-charcoal hover:underline underline-offset-4 font-normal">info@platinrein.de</a>
               </p>
             </div>
           </section>

@@ -30,7 +30,7 @@ export default function Impressum() {
               </h2>
             </div>
             <div className="md:col-span-8 space-y-4">
-              <p className="text-charcoal font-medium text-lg">Platinrein Gebäudeservice</p>
+              <p className="text-charcoal font-medium text-lg brand-name">Platinrein Gebäudeservice</p>
               <p>
                 Inhaber: Resul Gündüz<br />
                 Letmather Str. 13<br />
@@ -49,11 +49,11 @@ export default function Impressum() {
             <div className="md:col-span-8 space-y-6">
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] uppercase tracking-widest text-charcoal/30 font-bold">Telefon</span>
-                <p className="text-charcoal">+49 156 78332769</p>
+                <a href="tel:+4915678332769" className="text-charcoal hover:underline underline-offset-4 font-normal">+49 156 78332769</a>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] uppercase tracking-widest text-charcoal/30 font-bold">E-Mail</span>
-                <p className="text-charcoal">info@platinrein.de</p>
+                <a href="mailto:info@platinrein.de" className="text-charcoal hover:underline underline-offset-4 font-normal">info@platinrein.de</a>
               </div>
             </div>
           </section>
@@ -65,6 +65,13 @@ export default function Impressum() {
               </h2>
             </div>
             <div className="md:col-span-8 space-y-8">
+              <div>
+                <h3 className="text-charcoal font-medium mb-2 uppercase text-[10px] tracking-widest">Umsatzsteuer-ID</h3>
+                <p>
+                  Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+                  <span className="font-medium text-charcoal tracking-wide">DE463710810</span>
+                </p>
+              </div>
               <div>
                 <h3 className="text-charcoal font-medium mb-2 uppercase text-[10px] tracking-widest">Verantwortlich</h3>
                 <p>Inhaltlich verantwortlich nach § 55 Abs. 2 RStV: Resul Gündüz</p>

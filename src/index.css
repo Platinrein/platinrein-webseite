@@ -9,13 +9,42 @@
   --color-studio: #FDFDFD;
   --color-platinum: #EAEAEA;
   --color-accent: #6366f1; /* Subtle tech accent */
+
+  /* Herbstliche Farbtöne (Warmes Orange, Tiefes Kastanienbraun, Strahlendes Gold & Kupfer) */
+  --color-autumn-gold: #e5a93b;
+  --color-autumn-amber: #d97706;
+  --color-autumn-orange: #ea580c;
+  --color-autumn-copper: #c2410c;
+  --color-autumn-brown: #542c12;
+  --color-autumn-deepbrown: #33180c;
+  --color-autumn-warmglow: #fff8f0;
 }
 
 @layer base {
+  *, *::before, *::after {
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   body {
     @apply bg-studio text-charcoal font-sans antialiased;
     scroll-behavior: smooth;
   }
+}
+
+/* Brand name protection: Never break or hyphenate Platinrein */
+.brand-name {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  hyphens: none !important;
+  display: inline-block;
 }
 
 /* Custom smooth scroll bar for light theme */

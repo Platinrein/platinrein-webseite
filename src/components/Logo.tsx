@@ -5,10 +5,10 @@ interface LogoProps {
   showText?: boolean;
 }
 
-export default function Logo({ className = "", showText = true }: LogoProps) {
+export default function Logo({ className = "text-charcoal", showText = true }: LogoProps) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      <div className="relative w-10 h-10 flex items-center justify-center">
+    <div className={`flex items-center gap-3 shrink-0 ${className}`}>
+      <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
         {/* Subtle background glow/circle */}
         <div className="absolute inset-0 bg-charcoal/5 rounded-full scale-150 animate-pulse-slow"></div>
         
@@ -17,7 +17,7 @@ export default function Logo({ className = "", showText = true }: LogoProps) {
           viewBox="0 0 40 40" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full text-charcoal"
+          className="w-full h-full text-current"
         >
           {/* Main "P" Shape - Geometric & Minimalist */}
           <path 
@@ -45,11 +45,11 @@ export default function Logo({ className = "", showText = true }: LogoProps) {
       </div>
       
       {showText && (
-        <div className="flex flex-col leading-none">
-          <span className="text-xl font-bold tracking-[-0.05em] uppercase text-charcoal">
+        <div className="flex flex-col leading-none select-none">
+          <span className="brand-name text-xl font-bold tracking-[-0.03em] uppercase text-current whitespace-nowrap select-none">
             Platinrein
           </span>
-          <span className="text-[7px] uppercase tracking-[0.6em] text-charcoal/30 mt-1 font-bold">
+          <span className="brand-name text-[7px] uppercase tracking-[0.45em] text-current opacity-40 mt-1 font-bold whitespace-nowrap select-none">
             Gebäudeservice
           </span>
         </div>
