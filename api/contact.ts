@@ -1,5 +1,5 @@
 // Vercel-Funktion für das Kontaktformular (auf checkdomain übernimmt das public/api/contact.php).
-// Benötigt in Vercel die Umgebungsvariable RESEND_API_KEY, optional RESEND_FROM (Absender einer bei Resend bestätigten Domain).
+// Benötigt in Vercel die Umgebungsvariable RESEND_KEY (oder RESEND_API_KEY), optional RESEND_FROM (Absender einer bei Resend bestätigten Domain).
 
 const TO = "info@platinrein.de";
 
@@ -29,7 +29,7 @@ export async function POST(request: Request): Promise<Response> {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fallback("Bitte geben Sie eine gültige E-Mail-Adresse ein.", 400);
   if (message.length < 5) return fallback("Bitte geben Sie eine aussagekräftige Nachricht ein (mindestens 5 Zeichen).", 400);
 
-  const apiKey = process.env.RESEND_API_KEY;
+  const apiKey = process.env.RESEND_KEY || process.env.RESEND_API_KEY;
   if (!apiKey) {
     return fallback("Das Formular ist gerade nicht erreichbar. Bitte schreiben Sie uns direkt an info@platinrein.de oder per WhatsApp.", 503);
   }
