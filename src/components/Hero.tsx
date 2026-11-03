@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import heroImage from "../assets/images/hero_luxury_building_1791206927412.jpg";
+// Foto: Stephan Bechert, Unsplash
+import heroImage from "../assets/images/hero_winter_haus.jpg";
 
 // Saisonaler Hinweis im Kopfbereich. Für eine neutrale Seite einfach auf null setzen.
 const seasonNote: { badge: string; text: string } | null = {
@@ -15,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
         <img
           src={heroImage}
-          alt="Modernes Gebäude mit großen, sauberen Glasflächen"
+          alt="Modernes Haus mit großen, sauberen Glasflächen im verschneiten Winterabend"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-frost via-frost/90 to-frost/40 lg:via-frost/80 lg:to-transparent" />
