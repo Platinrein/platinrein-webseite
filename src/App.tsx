@@ -16,7 +16,6 @@ import Footer from "./components/Footer";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import SocialComingSoon from "./pages/SocialComingSoon";
-import DocumentGenerator from "./pages/DocumentGenerator";
 import { SeasonProvider } from "./context/SeasonContext";
 
 function Home() {
@@ -45,7 +44,6 @@ export default function App() {
               <Route path="/impressum" element={<Impressum />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
               <Route path="/social-bald" element={<SocialComingSoon />} />
-              <Route path="/dokumente" element={<DocumentGenerator />} />
             </Routes>
           </main>
           <Footer />

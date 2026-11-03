@@ -85,7 +85,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row items-center gap-4 text-[9px] uppercase tracking-[0.4em] text-charcoal/40 font-bold order-1 md:order-2 text-center">
           <span>
-            <Link to="/dokumente" className="hover:text-charcoal/80 transition-colors inline-block" title="Interner Verwaltungszugang">©</Link> 2026 <span className="brand-name">Platinrein Gebäudeservice</span>
+            © 2026 <span className="brand-name">Platinrein Gebäudeservice</span>
           </span>
           <span className="hidden md:inline text-autumn-amber/30">|</span>
           <span className="brand-name">USt-IdNr.: DE463710810</span>

@@ -79,9 +79,9 @@ export default function Datenschutz() {
                 </p>
               </div>
               <div>
-                <h3 className="text-charcoal font-medium mb-3">Newsletter & E-Mail-Versand (Resend)</h3>
+                <h3 className="text-charcoal font-medium mb-3">Hosting und E-Mail-Versand</h3>
                 <p>
-                  Für den Versand von E-Mails aus unserem Kontaktformular nutzen wir den Dienst Resend (Resend Inc., 43 Page St, San Francisco, CA 94102, USA). Die von Ihnen im Formular eingegebenen Daten werden an Resend übertragen, um den Versand der Nachricht an uns zu ermöglichen. Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer zuverlässigen Kommunikation).
+                  Diese Website und unser E-Mail-Postfach werden bei der checkdomain GmbH (Lübeck, Deutschland) betrieben. Nachrichten aus dem Kontaktformular werden über den Server dieses Anbieters direkt an unser Postfach gesendet und nicht an Dritte weitergegeben. Grundlage ist Art. 6 Abs. 1 lit. b und f DSGVO. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung.
                 </p>
               </div>
               <div>
@@ -93,7 +93,7 @@ export default function Datenschutz() {
               <div>
                 <h3 className="text-charcoal font-medium mb-3">Cookies</h3>
                 <p>
-                  Unsere Website verwendet keine technisch nicht notwendigen Cookies. Wir verzichten auf Tracking-Cookies von Drittanbietern, um Ihre Privatsphäre maximal zu schützen.
+                  Unsere Website verwendet keine technisch nicht notwendigen Cookies. Wir verzichten auf Tracking-Cookies von Drittanbietern. Schriftarten werden lokal von unserem Server geladen, es findet keine Verbindung zu Google statt.
                 </p>
               </div>
             </div>

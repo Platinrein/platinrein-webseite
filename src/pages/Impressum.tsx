@@ -74,7 +74,7 @@ export default function Impressum() {
               </div>
               <div>
                 <h3 className="text-charcoal font-medium mb-2 uppercase text-[10px] tracking-widest">Verantwortlich</h3>
-                <p>Inhaltlich verantwortlich nach § 55 Abs. 2 RStV: Resul Gündüz</p>
+                <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Resul Gündüz, Letmather Str. 13, 58644 Iserlohn</p>
               </div>
             </div>
           </section>
@@ -87,10 +87,6 @@ export default function Impressum() {
             </div>
             <div className="md:col-span-8">
               <p>
-                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-charcoal hover:underline ml-1 font-medium">
-                  ec.europa.eu/consumers/odr/
-                </a>.<br/>
                 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
               </p>
             </div>
@@ -104,7 +100,7 @@ export default function Impressum() {
             <div className="md:col-span-8 space-y-8">
               <div>
                 <h3 className="text-charcoal font-medium mb-2 uppercase text-[10px] tracking-widest">Haftung für Inhalte</h3>
-                <p className="text-sm">Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+                <p className="text-sm">Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
               </div>
               <div>
                 <h3 className="text-charcoal font-medium mb-2 uppercase text-[10px] tracking-widest">Urheberrecht</h3>
