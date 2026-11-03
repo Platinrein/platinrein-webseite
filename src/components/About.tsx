@@ -1,9 +1,7 @@
 import { motion } from "motion/react";
-import { useSeason } from "../context/SeasonContext";
+import aboutImage from "../assets/images/about_craft_perfection_1791206937704.jpg";
 
 export default function About() {
-  const { seasonConfig } = useSeason();
-
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -29,10 +27,9 @@ export default function About() {
       {/* Full-Bleed High-End Architectural Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <img 
-          src={seasonConfig.aboutImage} 
+          src={aboutImage} 
           alt="Exklusives modernes Architektur-Foyer mit poliertem Boden und Glas" 
           className="w-full h-full object-cover object-center scale-105 transition-all duration-1000"
-          referrerPolicy="no-referrer"
         />
         {/* Luxuriöse weiche Schatten & Verläufe zur Gewährleistung bester Lesbarkeit */}
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/30 lg:hidden"></div>
@@ -60,11 +57,10 @@ export default function About() {
             <span className="italic font-serif text-white/30">der bleibt.</span>
           </h2>
           <p className="text-lg text-white/80 font-light leading-relaxed max-w-lg mb-4">
-            <span className="brand-name font-medium text-white">Platinrein</span> wurde mit einer klaren Mission gegründet: Gebäudeservice nicht nur als 
-            Reinigung, sondern als konsequenten Werterhalt mit höchster Diskretion zu begreifen. 
+            <span className="brand-name font-medium text-white">Platinrein</span> wurde mit einer klaren Mission gegründet: saubere Räume, verlässliche Termine und ein fester Ansprechpartner. In der Regel reinigt bei Ihnen immer dieselbe Person, eine Vertretung geben wir vorab bekannt.
           </p>
           <p className="text-base text-white/60 font-light leading-relaxed max-w-lg">
-            Direkt aus Iserlohn agieren wir flexibel im gesamten Raum Nordrhein-Westfalen für Kunden, die Perfektion schätzen und keine materiellen Kompromisse eingehen.
+            Von Iserlohn aus sind wir im gesamten Märkischen Kreis für Sie da. Reinigungsmittel und Geräte bringen wir selbst mit.
           </p>
         </motion.div>
         
@@ -76,8 +72,8 @@ export default function About() {
         >
           <div className="grid grid-cols-1 gap-8 w-full bg-charcoal/55 backdrop-blur-md p-8 rounded-lg border border-white/10 shadow-xl">
             {[
-              { label: "Werterhalt & Diskretion", value: "100%" },
-              { label: "Sorgfalt", value: "Maximal" },
+              { label: "Material inklusive", value: "Alles dabei" },
+              { label: "Ansprechpartner", value: "Persönlich" },
               { label: "Standort", value: "Iserlohn" },
             ].map((stat, i) => (
               <motion.div 
