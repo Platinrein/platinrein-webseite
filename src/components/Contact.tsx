@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Send, CheckCircle2, Instagram, Music2, Phone, Mail, MapPin, ArrowUpRight, AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import contactImage from "../assets/images/contact_exclusive_entrance_1791206947700.jpg";
 
 const XIcon = ({ size = 16 }: { size?: number }) => (
   <svg 
@@ -81,7 +82,7 @@ export default function Contact() {
       {/* Full-Bleed Elegant Architectural Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none opacity-[0.25] lg:opacity-[0.14] overflow-hidden">
         <img 
-          src="/src/assets/images/contact_exclusive_entrance_1791206947700.jpg" 
+          src={contactImage} 
           alt="Modernes exklusives Gebäudeportal im Abendlicht" 
           className="w-full h-full object-cover object-center scale-102 filter brightness-[0.95] contrast-[1.05]"
           referrerPolicy="no-referrer"
@@ -131,7 +132,7 @@ export default function Contact() {
               <p className="text-[9px] text-charcoal/30 uppercase tracking-[0.3em] font-bold mb-2 flex items-center gap-2">
                 <MapPin size={12} className="text-charcoal/40" /> Standort & Einzugsgebiet
               </p>
-              <p className="text-xl font-light text-charcoal tracking-tight">Iserlohn & ganz NRW</p>
+              <p className="text-xl font-light text-charcoal tracking-tight">Iserlohn & Märkischer Kreis</p>
               <p className="text-xs text-charcoal/40 font-light mt-1">Letmather Str. 13, 58644 Iserlohn</p>
             </div>
 
@@ -205,7 +206,7 @@ export default function Contact() {
               <div className="mb-6 pb-4 border-b border-platinum/40 flex justify-between items-center">
                 <div>
                   <h3 className="text-lg font-light text-charcoal tracking-tight">Unverbindliche Anfrage</h3>
-                  <p className="text-[11px] text-charcoal/50 font-light">Wir antworten verlässlich innerhalb von 24 Stunden.</p>
+                  <p className="text-[11px] text-charcoal/50 font-light">Wir melden uns in der Regel innerhalb von 24 Stunden.</p>
                 </div>
                 <span className="text-[9px] uppercase tracking-[0.2em] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 border border-emerald-200/50">
                   Online
@@ -264,7 +265,7 @@ export default function Contact() {
                       Nachricht oder Projektbeschreibung <span className="text-charcoal/30">*</span>
                     </label>
                     <div className="flex flex-wrap gap-1.5">
-                      {["🍂 Herbst-Glaspflege", "Unterhaltsreinigung", "Büro & Kanzlei"].map((tag) => (
+                      {["Fensterreinigung", "Unterhaltsreinigung", "Treppenhaus"].map((tag) => (
                         <button
                           key={tag}
                           type="button"
@@ -276,7 +277,7 @@ export default function Contact() {
                               });
                             }
                           }}
-                          className="text-[9px] px-2 py-0.5 bg-neutral-100 hover:bg-amber-100/70 border border-neutral-200 hover:border-amber-400 text-charcoal/70 transition-colors cursor-pointer"
+                          className="text-[9px] px-2 py-0.5 bg-neutral-100 hover:bg-neutral-200/70 border border-neutral-200 hover:border-charcoal/30 text-charcoal/70 transition-colors cursor-pointer"
                         >
                           + {tag}
                         </button>

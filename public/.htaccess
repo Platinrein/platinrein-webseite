@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 0. Immer HTTPS und www (eine einheitliche Adresse für Google)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^(.*)$ https://www.platinrein.de/$1 [R=301,L]
+
+  # 1. Ensure /api/contact calls the PHP backend script
+  RewriteRule ^api/contact/?$ api/contact.php [L,QSA]
+
+  # 2. Redirect all other requests to index.html for Single Page Application (React Router)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
