@@ -79,9 +79,15 @@ export default function Datenschutz() {
                 </p>
               </div>
               <div>
-                <h3 className="text-charcoal font-medium mb-3">Hosting und E-Mail-Versand</h3>
+                <h3 className="text-charcoal font-medium mb-3">Hosting (Vercel)</h3>
                 <p>
-                  Diese Website und unser E-Mail-Postfach werden bei der checkdomain GmbH (Lübeck, Deutschland) betrieben. Nachrichten aus dem Kontaktformular werden über den Server dieses Anbieters direkt an unser Postfach gesendet und nicht an Dritte weitergegeben. Grundlage ist Art. 6 Abs. 1 lit. b und f DSGVO. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung.
+                  Diese Website wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA, gehostet. Beim Aufruf der Seite verarbeitet Vercel technisch notwendige Daten wie Ihre IP-Adresse in Server-Log-Dateien. Grundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und zuverlässigen Bereitstellung der Website). Vercel ist nach dem EU-US Data Privacy Framework zertifiziert. Mit Vercel besteht ein Vertrag zur Auftragsverarbeitung.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-charcoal font-medium mb-3">E-Mail-Versand des Kontaktformulars (Resend)</h3>
+                <p>
+                  Nachrichten aus dem Kontaktformular werden über den Dienst Resend (Resend Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA) an unser Postfach übermittelt. Dabei werden die von Ihnen eingegebenen Daten an Resend übertragen. Grundlage ist Art. 6 Abs. 1 lit. b und f DSGVO. Mit Resend besteht ein Vertrag zur Auftragsverarbeitung, die Übermittlung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln.
                 </p>
               </div>
               <div>
@@ -93,7 +99,7 @@ export default function Datenschutz() {
               <div>
                 <h3 className="text-charcoal font-medium mb-3">Cookies</h3>
                 <p>
-                  Unsere Website verwendet keine technisch nicht notwendigen Cookies. Wir verzichten auf Tracking-Cookies von Drittanbietern. Schriftarten werden lokal von unserem Server geladen, es findet keine Verbindung zu Google statt.
+                  Unsere Website verwendet keine technisch nicht notwendigen Cookies. Wir verzichten auf Tracking-Cookies von Drittanbietern. Schriftarten werden zusammen mit der Website ausgeliefert, es findet keine Verbindung zu Google statt.
                 </p>
               </div>
             </div>
